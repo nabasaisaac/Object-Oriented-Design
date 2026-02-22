@@ -144,11 +144,11 @@ class BudgetTracker:
             except ValueError as e:
                 print(f"❌ {e}")
 
-    # def add_transaction(self, description: str, amount: float) -> Transaction:
-    #     """Create and store a Transaction (composition)."""
-    #     transaction = Transaction(description, amount)
-    #     self._transactions.append(transaction)
-    #     return transaction
+    def add_transaction(self, description: str, amount: float) -> Transaction:
+        """Create and store a Transaction (composition)."""
+        transaction = Transaction(description, amount)
+        self._transactions.append(transaction)
+        return transaction
 
     def get_total_spent(self) -> float:
         """Sum using composition (transactions list)."""
